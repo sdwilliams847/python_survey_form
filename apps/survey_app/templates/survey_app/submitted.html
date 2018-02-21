@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Submitted Information</title>
+    <link href="static/survey_app/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/survey_app/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="nbox">
+            <h4>Thanks for submitting this form! You have submitted this form {{ request.session.count }} times now.</h4>
+        </div><br>
+        
+        <div class="box">
+        <u><h1>Submitted Information</h1></u><br>
+            <div class ="tbowl">
+                <table>
+                    <tr>
+                        <td><h4>Email: </h4></td>
+                        <td><h4>{{ request.session.post.email }}</h4></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Dojo Location: </h4></td>
+                        <td><h4>{{ request.session.post.location }}</h4></td>
+                    </tr>
+                        <td><h4>Favorite Language: </h4></td>
+                        <td><h4>{{ request.session.post.fav_lang }}</h4></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Comment (optional): </h4></td>
+                        <td><h4>{{ request.session.post.comment }}</h4></td>
+                    </tr>
+                </table>
+            </div>
+                <br><a href="/back"><button type="button" class="btn btn-default">Back</button></a>
+        </div>            
+    </div>
+</body>
+</html>

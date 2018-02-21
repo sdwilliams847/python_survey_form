@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+    <link href="static/survey_app/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <br><fieldset>        
+                <legend>Survey Form</legend>
+                    <form action="/processs" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="email">Email: </label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="dojo_location">Dojo Location: </label>
+                            <select class="form-control" id="dojo_location" name="location">
+                                <option>DC</option>
+                                <option>Seattle</option>
+                                <option>Houston</option>
+                                <option>Chicago</option>
+                                <option>San Francisco</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fav_lang">Favorite Language</label>
+                            <select class="form-control" id="fav_lang" name="fav_lang">
+                                <option>Python</option>
+                                <option>Javascript</option>
+                                <option>Java</option>
+                                <option>C++</option>
+                                <option>PHP</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Comment (optional):</label>
+                            <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+                        </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

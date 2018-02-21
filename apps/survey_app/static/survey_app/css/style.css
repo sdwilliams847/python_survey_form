@@ -1,0 +1,19 @@
+.box {
+    background-color: grey;
+    border: solid black;
+    padding: 10px;
+    width: 70%;
+
+}
+
+.box h1 {
+    text-align: center;
+}
+
+.nbox {
+    margin-top: 10px;
+    background-color: green;
+    border: solid black;
+    padding: 10px;
+    width: 70%;
+}
